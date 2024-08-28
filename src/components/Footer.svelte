@@ -57,7 +57,7 @@
 </script>
 
 <footer
-    class="pt-16 px-6 lg:px-32 flex-column p-6 gap-y-4 bg-[url('/footer.png')] bg-cover bg-center flex flex-col lg:gap-16"
+    class="pt-16 px-6 lg:px-32 flex-column flex flex-col gap-16 bg-[url('/footer.png')] bg-cover bg-center"
 >
     <div class="grid flex justify-center">
         <a href="/" class="logo">
@@ -70,8 +70,10 @@
     >
         <div class="text-center flex flex-col justify-center gap-4 w-max">
             <div>
-                <h3 class="text-3xl font-semibold">Your Ethereum Edge</h3>
-                <p class="text-white">
+                <h3 class="text-xl sm:text-3xl font-semibold">
+                    Your Ethereum Edge
+                </h3>
+                <p class="text-white text-sm sm:text-md">
                     Get first-hand research delivered by our team of experts.
                 </p>
             </div>
@@ -87,11 +89,11 @@
                     name="email"
                     placeholder="Enter your email"
                     required
-                    class="outline-none rounded-l bg-black border border-green w-max-content p-2 text-sm w-full border-r-none"
+                    class="outline-none rounded-l bg-black border border-green w-max-content p-2 text-sm w-full border-r-none text-sm md:text-md"
                 />
                 <button
                     type="submit"
-                    class="rounded-r bg-green text-black px-4 py-2 font-bold min-w-[110px] min-h-[42px]"
+                    class="rounded-r bg-green text-black px-2 md:px-4 py-2 font-bold min-w-[110px] min-h-[42px] text-sm md:text-md"
                 >
                     Subscribe
                 </button>
@@ -99,7 +101,7 @@
             <span id="response-message" class="text-sm">{responseMessage}</span>
         </div>
     </div>
-    <div class="grid gap-y-8 lg:flex lg:justify-between">
+    <div class="grid gap-y-12 lg:flex lg:justify-between">
         <div class="grid text-center lg:text-left gap-y-2">
             <h3 class="text-white font-semibold text-xl">Resources</h3>
             <div class="flex flex-col gap-1">
@@ -153,7 +155,7 @@
         </div>
     </div>
 
-    <div class="text-center text-gray-200 text-sm italic">
+    <div class="text-center text-gray-200 text-sm italic mb-4">
         <p>(C) 2024 2077 Collective. All rights reserved.</p>
     </div>
 </footer>
