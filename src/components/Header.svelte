@@ -33,8 +33,7 @@
                 <a
                     href="https://2077.xyz/support"
                     target="_blank"
-                    class="font-bold hover:text-greenLm dark:hover:text-green"
-                    >Support us</a
+                    class="font-bold dark:hover:text-green">Support us</a
                 >
                 <a
                     href="#subscribe"
