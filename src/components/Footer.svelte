@@ -12,7 +12,7 @@
             const response = await fetch(
                 'https://cms.2077.xyz/get-csrf-token/',
                 {
-                    credentials: 'include', // Ensure cookies are sent with the request
+                    credentials: 'include',
                 },
             )
             const data = await response.json()
@@ -36,7 +36,7 @@
                 headers: {
                     'X-CSRFToken': csrfToken,
                 },
-                credentials: 'include', // Ensure cookies are sent with the request
+                credentials: 'include',
             })
 
             if (response.ok) {
@@ -101,30 +101,33 @@
             <span id="response-message" class="text-sm">{responseMessage}</span>
         </div>
     </div>
+
     <div class="grid gap-y-12 lg:flex lg:justify-between">
         <div class="grid text-center lg:text-left gap-y-2">
             <h3 class="text-white font-semibold text-xl">Resources</h3>
-            <div class="flex flex-col gap-1">
+            <div
+                class="flex flex-col gap-1 [&>a]:font-semibold [&>a]:text-gray-100"
+            >
                 <a
-                    href="https://eip2077.info"
+                    href="https://2077.xyz"
                     target="_blank"
-                    class="font-semibold text-gray-100"
+                    class="hover:text-white"
                 >
-                    EIP-2077
+                    2077 Collective
                 </a>
                 <a
                     href="https://eips.wiki"
                     target="_blank"
-                    class="font-semibold text-gray-100"
+                    class="hover:text-white"
                 >
                     EIP Wiki
                 </a>
                 <a
-                    href="https://research.2077.xyz"
+                    href="https://etherpedia.2077.xyz"
                     target="_blank"
-                    class="font-semibold text-gray-100"
+                    class="hover:text-white"
                 >
-                    2077 Research
+                    Etherpedia
                 </a>
             </div>
         </div>
@@ -149,7 +152,10 @@
 
         <div class="text-center lg:text-left">
             <h3 class="text-white font-semibold text-xl">Contact</h3>
-            <a class="font-semibold text-gray-100" href="mailto:admin@2077.xyz">
+            <a
+                class="font-semibold text-gray-100 hover:text-white"
+                href="mailto:admin@2077.xyz"
+            >
                 admin@2077.xyz
             </a>
         </div>
