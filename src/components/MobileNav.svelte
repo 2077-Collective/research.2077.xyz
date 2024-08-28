@@ -33,11 +33,14 @@
                 <ul class="mt-4 space-y-4">
                     <li>
                         <a
-                            href="https://eip2077.info"
+                            href="https://2077.xyz"
                             target="_blank"
-                            class="block px-4 py-2">EIP-2077</a
+                            class="block px-4 py-2"
                         >
+                            2077 Collective
+                        </a>
                     </li>
+
                     <li>
                         <a
                             href="https://eips.wiki"
@@ -45,13 +48,7 @@
                             class="block px-4 py-2">EIP Wiki</a
                         >
                     </li>
-                    <li>
-                        <a
-                            href="https://research.2077.xyz"
-                            target="_blank"
-                            class="block px-4 py-2">2077 Labs</a
-                        >
-                    </li>
+
                     <li>
                         <a
                             href="https://etherpedia.2077.xyz"
@@ -77,7 +74,7 @@
                 <a
                     on:click={() => (open = false)}
                     href="#subscribe"
-                    class="bg-greenLm text-black px-8 py-2 rounded font-bold"
+                    class="bg-black dark:bg-green dark:text-black text-white px-8 py-2 rounded font-bold"
                 >
                     Subscribe
                 </a>
