@@ -1,11 +1,9 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
-
     export let content: string
 </script>
 
 <div
-    class="text-red
+    class="
     max-w-screen-lg m-auto flex flex-col gap-y-4 mb-32 dark:text-white
     [&>p>a]:text-green-900 [&>p>a]:font-semibold
     [&>h1]:text-3xl [&>h2]:text-2xl [&>h3]:text-xl [&>h4]:text-lg [&>h1]:font-semibold
