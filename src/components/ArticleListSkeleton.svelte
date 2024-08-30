@@ -1,7 +1,7 @@
 <li class="flex flex-col gap-y-1 group cursor-pointer">
     <div class="bg-gray-100 dark:bg-gray-900 animate-pulse rounded-md">
         <img
-            src="#"
+            src="/images/block-stm-sealevel/1.png"
             alt=""
             width="720"
             height="400"
