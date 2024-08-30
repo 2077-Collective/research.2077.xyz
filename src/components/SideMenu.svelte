@@ -1,22 +1,23 @@
 <script lang="ts">
-    import { type Article } from '../types/article'
     import {
         setCategory,
         clearCategories,
         category,
     } from '../stores/filters.store'
+    import { articles } from '../stores/articles.store'
 
-    export let articles: Article[]
     let availableCategories: string[] = []
 
     $: {
-        availableCategories = Array.from(
-            new Set(
-                articles.flatMap((article) =>
-                    article.categories.map((category) => category.name),
+        if ($articles.length > 0) {
+            availableCategories = Array.from(
+                new Set(
+                    $articles.flatMap((article) =>
+                        article.categories.map((category) => category.name),
+                    ),
                 ),
-            ),
-        )
+            )
+        }
     }
 </script>
 

@@ -1,18 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { type Article } from '../types/article'
 import SideMenu from '../components/SideMenu.svelte'
 import ArticleList from '../components/ArticleList.svelte'
-import { cachedFetch } from '../utils/cached-fetch'
-
-let articles: Article[] = []
-
-try {
-    const response = await cachedFetch('https://cms.2077.xyz/api/articles')
-    articles = await response.clone().json()
-} catch (error) {
-    console.error(error)
-}
 ---
 
 <Layout
@@ -32,9 +21,11 @@ try {
                     these systems.
                 </p>
             </div>
-            <div class="flex-col lg:flex-row flex justify-between">
-                <SideMenu client:load articles={articles} />
-                <ArticleList client:load articles={articles} />
+            <div class="flex-col lg:flex-row flex w-full">
+                <SideMenu client:load />
+                <div class="w-full">
+                    <ArticleList client:load />
+                </div>
             </div>
         </section>
     </main>
