@@ -5,7 +5,7 @@
 <div
     class="
     max-w-screen-lg m-auto flex flex-col gap-y-4 mb-32 dark:text-white
-    [&>p>a]:text-green-900 [&>p>a]:font-semibold
+    [&>p>a]:text-green-900 [&>p>a]:font-bold
     [&>h1]:text-3xl [&>h2]:text-2xl [&>h3]:text-xl [&>h4]:text-lg [&>h1]:font-semibold
     [&>h2]:font-semibold [&>h3]:font-semibold [&>h4]:font-semibold
     [&>ul]:list-disc [&>ol]:list-decimal [&>ul]:pl-6 [&>ol>li]:pl-4 [&>ol]:pl-6
