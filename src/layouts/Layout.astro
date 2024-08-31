@@ -194,7 +194,7 @@ const defaultOgImage = new URL(
     p,
     ul,
     li {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     pre,
@@ -208,5 +208,13 @@ const defaultOgImage = new URL(
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
+    }
+
+    @media (max-width: 1024px) {
+        p,
+        ul,
+        li {
+            font-size: 1.1rem;
+        }
     }
 </style>
