@@ -8,13 +8,15 @@ interface Props {
     title: string
     description: string
     ogImage?: URL
+    slug?: string
 }
 
-const { title, description, ogImage } = Astro.props
+const { title, description, ogImage, slug } = Astro.props
 
 const defaultOgImage = new URL(
     'https://res.cloudinary.com/dltdrlzdg/image/upload/v1720021067/ShMk1Iw_vrsqmi.webp',
 )
+const defaultSlug = ''
 ---
 
 <script is:inline>
@@ -49,6 +51,7 @@ const defaultOgImage = new URL(
         ogImage={ogImage || defaultOgImage}
         title={title}
         description={description}
+        slug={slug || defaultSlug}
     />
     <Header client:only />
     <body class="bg-white dark:bg-black dark:text-white min-h-screen">
