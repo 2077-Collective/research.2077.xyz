@@ -22,18 +22,30 @@ const { title, description, ogImage } = Astro.props
     <meta name="title" content={`${title}`} />
     <meta name="description" content={description} />
 
+    <!-- OG meta tags -->
     <meta property="og:type" content="website" />
-    
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
 
+    <!-- Twitter meta tags -->
+    <meta name="twitter:type" content="website" />
     <meta property="twitter:card" content="summary_large_image" />
-    
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
+    <meta name="twitter:site" content="@2077Research" />
 
+    <!-- General meta tags -->
+    <meta name="title" content={title} />
+	<meta
+		name="description"
+        content={description}
+	/>
+	<meta
+		name="description"
+        content={description}
+	/>
     
     <link rel="icon" type="image/svg" href="/favicon.svg" />
 
