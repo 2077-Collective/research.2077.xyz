@@ -8,13 +8,15 @@ interface Props {
     title: string
     description: string
     ogImage?: URL
+    slug?: string
 }
 
-const { title, description, ogImage } = Astro.props
+const { title, description, ogImage, slug } = Astro.props
 
 const defaultOgImage = new URL(
     'https://res.cloudinary.com/dltdrlzdg/image/upload/v1720021067/ShMk1Iw_vrsqmi.webp',
 )
+const defaultSlug = ''
 ---
 
 <script is:inline>
@@ -30,30 +32,34 @@ const defaultOgImage = new URL(
         document.getElementById('loading').classList.remove('hidden')
     })
 
-    document.addEventListener('click', function(event) {
-        let targetElement = event.target;
+    document.addEventListener('click', function (event) {
+        let targetElement = event.target
 
         // Traverse up the DOM tree to see if any ancestor is an <a> tag
         while (targetElement && targetElement.tagName !== 'A') {
-            targetElement = targetElement.parentElement;
+            targetElement = targetElement.parentElement
         }
 
         if (targetElement && targetElement.tagName === 'A') {
             document.getElementById('loading').classList.remove('hidden')
         }
-    });
+    })
 </script>
 
 <html lang="en" class="h-full">
-    <BaseHead ogImage={ogImage || defaultOgImage} title={title} description={description} />
+    <BaseHead
+        ogImage={ogImage || defaultOgImage}
+        title={title}
+        description={description}
+        slug={slug || defaultSlug}
+    />
     <Header client:only />
     <body class="bg-white dark:bg-black dark:text-white min-h-screen">
         <div id="loading" class="hidden">
             <LoadingBar client:only />
         </div>
         <slot />
-    </body>
-    <Footer client:only/>
+    </body><Footer client:only />
 </html>
 
 <style is:global>
@@ -63,6 +69,66 @@ const defaultOgImage = new URL(
             url('/fonts/avenirltstd-black-webfont.woff2') format('woff2'),
             url('/fonts/avenirltstd-black-webfont.woff') format('woff');
         font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'avenir_black';
+        src:
+            url('/fonts/avenirltstd-black-webfont.woff2') format('woff2'),
+            url('/fonts/avenirltstd-black-webfont.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Avenir';
+        src:
+            url('/fonts/avenirltstd-light-webfont.woff2') format('woff2'),
+            url('/fonts/avenirltstd-light-webfont.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Avenir';
+        src:
+            url('/fonts/avenirltstd-book-webfont.woff2') format('woff2'),
+            url('/fonts/avenirltstd-book-webfont.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Avenir';
+        src:
+            url('/fonts/avenirltstd-medium-webfont.woff2') format('woff2'),
+            url('/fonts/avenirltstd-medium-webfont.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Avenir';
+        src:
+            url('/fonts/avenirltstd-heavy-webfont.woff2') format('woff2'),
+            url('/fonts/avenirltstd-heavy-webfont.woff') format('woff');
+        font-weight: 600 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Avenir';
+        src:
+            url('/fonts/avenirltstd-black-webfont.woff2') format('woff2'),
+            url('/fonts/avenirltstd-black-webfont.woff') format('woff');
+        font-weight: 800 900;
         font-style: normal;
         font-display: swap;
     }
@@ -123,11 +189,35 @@ const defaultOgImage = new URL(
         font-family: 'avenir_book';
     }
 
-    pre, code {
+    strong,
+    strong > * {
+        font-family: 'avenir_black';
+    }
+
+    p,
+    ul,
+    li {
+        font-size: 1.2rem;
+    }
+
+    pre,
+    code {
         overflow-x: auto;
     }
 
     html {
         scroll-behavior: smooth;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    @media (max-width: 1024px) {
+        p,
+        ul,
+        li {
+            font-size: 1.1rem;
+        }
     }
 </style>
