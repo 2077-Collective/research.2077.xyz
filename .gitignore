@@ -24,6 +24,3 @@ pnpm-debug.log*
 .idea/
 
 .vercel
-
-# this is generated at build time
-public/sitemap.xml
