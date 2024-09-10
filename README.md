@@ -1,4 +1,4 @@
-# 2077 Research
+# 2077 Research.
 
 ## Run project
 
