@@ -62,7 +62,7 @@ const defaultSlug = ''
     </body><Footer client:only />
 </html>
 
-<style is:global>
+<style lang="scss" is:global>
     @font-face {
         font-family: 'avenir_black';
         src:
@@ -205,11 +205,24 @@ const defaultSlug = ''
         overflow-x: auto;
     }
 
-    
     blockquote {
         padding-inline-start: 2rem;
-        border-left: 4px solid #789D2C;
+        border-left: 4px solid #789d2c;
         font-style: italic;
+    }
+
+    table {
+        width: 90% !important;
+        border: 1px solid #789d2c !important;
+
+        tr,
+        td {
+            border: 1px solid #819b4e !important;
+        }
+
+        p {
+            padding-inline: 1rem;
+        }
     }
 
     html {
