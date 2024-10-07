@@ -24,7 +24,7 @@ interface ArticleData {
     categories: Category[]
     thumb: string
     description?: string
-    created_at: string
+    scheduled_publish_time: string
 }
 
 interface Article {
@@ -63,7 +63,7 @@ const formatDate = (dateString: string | undefined): string => {
     }).format(date)
 }
 
-const created_at = article?.data.created_at
+const created_at = article?.data.scheduled_publish_time
 const formattedDate = formatDate(created_at)
 ---
 
