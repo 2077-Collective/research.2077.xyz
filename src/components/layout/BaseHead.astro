@@ -39,16 +39,19 @@ const { title, description, ogImage, slug } = Astro.props
 
     <!-- General meta tags -->
     <meta name="title" content={title} />
-	<meta
-		name="description"
-        content={description}
-	/>
-	<meta
-		name="description"
-        content={description}
-	/>
-    
+    <meta name="description" content={description} />
+    <meta name="description" content={description} />
+
     <link rel="icon" type="image/svg" href="/favicon.svg" />
+
+    <!--Prism setup -->
+    <link rel="stylesheet" type="text/css" href="/src/styles/prism.css" />
+
+    <script is:inline>
+        import Prism from '/src/scripts/prism.js'
+        Prism.highlightAll()
+    </script>
+    <!-- -->
 
     <script
         is:inline
@@ -68,10 +71,5 @@ const { title, description, ogImage, slug } = Astro.props
         padding-block-start: 0;
         font-family: 'avenir-book', sans-serif;
         line-height: 1.7;
-    }
-
-    code {
-        color: #6052d1;
-        font-weight: 700;
     }
 </style>

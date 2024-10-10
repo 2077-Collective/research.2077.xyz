@@ -7,6 +7,7 @@ import { cachedFetch } from '../utils/cached-fetch'
 
 interface Category {
     name: string
+    slug: string
 }
 
 interface ArticleData {
@@ -37,7 +38,7 @@ let article: Article | null = null
 
 try {
     const response = await cachedFetch(
-        `https://cms.2077.xyz/api/articles/${id}`,
+        `http://127.0.0.1:8000/api/articles/${id}`,
     )
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
@@ -82,11 +83,11 @@ const formattedDate = formatDate(created_at)
                     <article>
                         <ul class="flex gap-x-2 mb-4">
                             {article.data?.categories.map(
-                                (category: { name: string }) => (
+                                (category: { name: string, slug: string }) => (
                                     <li>
                                         <a
                                             class="font-bold flex items-center gap-0.5 text-sm bg-[#1B1B1B] text-[#C6FF50] max-w-fit-content px-2 py-1.5 rounded-md"
-                                            href={`/categories/${category.name}`}
+                                            href={`/categories/${category.slug}`}
                                         >
                                             {category.name}
                                         </a>

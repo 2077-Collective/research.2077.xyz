@@ -8,7 +8,7 @@ import { cachedFetch } from '../utils/cached-fetch'
 let articles: Article[] = []
 
 try {
-    const response = await cachedFetch('https://cms.2077.xyz/api/articles')
+    const response = await cachedFetch('http://127.0.0.1:8000/api/articles')
     articles = await response.clone().json()
 } catch (error) {
     console.error(error)
