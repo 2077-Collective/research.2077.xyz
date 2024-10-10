@@ -35,10 +35,11 @@
                     {#each article.categories as category}
                         <li class="">
                             <a
-                                href={`/categories/${category.name}`}
+                                href={`/categories/${category.slug}`}
                                 class="mr-2 flex items-center gap-0.5 text-[12px] bg-[#1B1B1B] text-[#C6FF50] max-w-fit-content px-2 py-1 rounded-md"
                             >
                                 {category.name}
+                                <!-- Keep the display name as is -->
                             </a>
                         </li>
                     {/each}
