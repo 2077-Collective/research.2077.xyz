@@ -14,6 +14,7 @@
     [&>ul>li>ul>li>ul>li>ul]:list-disc [&>ul>li>ul>li>ul>li>ul]:pl-8
     [&>p>em]:text-gray-200 [&>p>em]:text-center [&>p>img]:mx-auto [&>p>img]:mt-4 [&>p:has(img)]:text-center
     [&>p>em>img]:mx-auto [&>p>em>img]:mt-4 [&>h3>img]:mx-auto [&>h3:has(img)]:text-center
+    [&_p:has(img)]:mb-2.5 [&_p:has(img)]:text-center [&_p:has(img)]:text-xs [&_p:has(img)]:text-gray-400
     [&>pre]:bg-gray [&>pre]:text-white [&>pre]:rounded-md [&>pre]:p-4 [&>pre]:overflow-x-scroll
     [&>pre>code>.hljs-string]:text-[#d69d85] [&>pre>code>.hljs-literal]:text-[#569cd6] [&>pre>code>.hljs-comment]:text-[#a2a8ad]
     [&>pre>code>.hljs-keyword]:text-[#d69d85]
