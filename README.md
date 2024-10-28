@@ -9,5 +9,5 @@ pnpm install
 
 Run server
 ```sh
-pnpm start
+pnpm dev
 ```
